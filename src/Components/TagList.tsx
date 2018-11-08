@@ -5,18 +5,19 @@ export interface IProps {
     ItemList: string[];
 }
 
-const taglist = (props: IProps) => {
+const TagList = (props: IProps) => {
 
     
 
     return (
         <div>
-            {props.ItemList.map((item,i) => {
-                <tag-list 
-                parimary-field={item}/>
+            test
+            {props.ItemList}
+            {props.ItemList.map(function(item,i) {
+               return <h1 key={i}>{item}</h1>
             })}
         </div>
     )
 }
 
-export default taglist;
+export default TagList;
