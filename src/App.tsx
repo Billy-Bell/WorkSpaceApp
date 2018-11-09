@@ -15,7 +15,7 @@ class App extends React.Component {
         <div > My Div </div>
         <TagList ItemList={['Unit Group Selection','Area Manager','Exec Chefs','Escalation Desk','General Manager','Project Manager -Pubs']} />
         <tag-list parimary-field='item' />
-
+        <div>Test</div>
       </div>
     );
   }
