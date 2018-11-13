@@ -16,13 +16,28 @@ export interface IUpdateState {
 
 class App extends React.Component {
 
-  public state = {
-    SelectFilter: '',
+  constructor (props: any) {
+    super(props);
+
+    this.UpdateState = this.UpdateState.bind(this);
   }
 
-  public UpdateState(stateName: string, value: string) {
-    this.setState({[stateName] : value});
+  public state = {
+    SelectFilter: '',
+    SelectGroup: '',
+    SelectUnits:'',
+    
   }
+  
+
+  public UpdateState(stateName: string, value: string) {
+    if (stateName !== 'SelectedUnits') {
+      this.setState({[stateName]: value})
+    } else {
+      console.log('test');
+    }
+    
+  };
 
 
   render() {
@@ -32,8 +47,8 @@ class App extends React.Component {
         <div className='container pt-5' >
           <div className='row'>
             <TagList UpdateState={this.UpdateState} Title='Select Filter' ItemList={['Unit Group Selection','Area Manager','Exec Chefs','Escalation Desk','General Manager','Project Manager -Pubs']} />
-            <TagList UpdateState={this.UpdateState} Title={'Select Group > '+ this.state.SelectFilter} ItemList={['Active Units','Prelauched Units','Leisure','Active & Deactivated Units FYTD','Active & Deactived Units','Example 1','Example 2', 'Example 3']} />
-            <TagList UpdateState={this.UpdateState} offset={5} Title='Selected units > ' ItemList={['0100 - Restaurant, Stevenage','1020 - Resturant, Leicester Square','1030 - Restaurant, Inverness','1060 - Restaurant, Charing Cross','1090 -  Resturant, London','Example 1','Example 2','Example 3']} />
+            <TagList UpdateState={this.UpdateState} Title={'Select Group'} Selection={this.state.SelectFilter} ItemList={['Active Units','Prelauched Units','Leisure','Active & Deactivated Units FYTD','Active & Deactived Units','Example 1','Example 2', 'Example 3']} />
+            <TagList UpdateState={this.UpdateState} offset={5} Title='Selected Units' Selection={this.state.SelectGroup} ItemList={['0100 - Restaurant, Stevenage','1020 - Resturant, Leicester Square','1030 - Restaurant, Inverness','1060 - Restaurant, Charing Cross','1090 -  Resturant, London','Example 1','Example 2','Example 3']} />
           </div>
         </div>
 
