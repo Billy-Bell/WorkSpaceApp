@@ -30,3 +30,18 @@
     transform: rotate(360deg);
   }
 }
+
+.SelectedItem {
+  background: lightslategrey;
+  color:white;
+}
+
+.SelectItem {
+  border-bottom: black solid 1px;
+}
+
+.SelectBox {
+  border: black solid 1px;
+  max-height: 195px;
+  overflow-y: scroll;
+}

@@ -25,30 +25,47 @@ class App extends React.Component {
   public state = {
     SelectFilter: '',
     SelectGroup: '',
-    SelectUnits:'',
+    SelectedUnits: '',
     
   }
   
 
   public UpdateState(stateName: string, value: string) {
-    if (stateName !== 'SelectedUnits') {
-      this.setState({[stateName]: value})
-    } else {
-      console.log('test');
-    }
+      this.setState({[stateName]: value.replace('&amp;','&')})
+  }
     
-  };
+  
 
 
   render() {
     return (
       <div className='vh-100 bg-light' >
         <tag-top-navbar name="Access" />
-        <div className='container pt-5' >
+        <div className='container ' >
           <div className='row'>
-            <TagList UpdateState={this.UpdateState} Title='Select Filter' ItemList={['Unit Group Selection','Area Manager','Exec Chefs','Escalation Desk','General Manager','Project Manager -Pubs']} />
-            <TagList UpdateState={this.UpdateState} Title={'Select Group'} Selection={this.state.SelectFilter} ItemList={['Active Units','Prelauched Units','Leisure','Active & Deactivated Units FYTD','Active & Deactived Units','Example 1','Example 2', 'Example 3']} />
-            <TagList UpdateState={this.UpdateState} offset={5} Title='Selected Units' Selection={this.state.SelectGroup} ItemList={['0100 - Restaurant, Stevenage','1020 - Resturant, Leicester Square','1030 - Restaurant, Inverness','1060 - Restaurant, Charing Cross','1090 -  Resturant, London','Example 1','Example 2','Example 3']} />
+            <TagList 
+              UpdateState={this.UpdateState} 
+              displayText={true} 
+              Title='Select Filter' 
+              Selected={this.state.SelectFilter} 
+              ItemList={['Unit Group Selection','Area Manager','Exec Chefs','Escalation Desk','General Manager','Project Manager -Pubs']} 
+            />
+            <TagList 
+              UpdateState={this.UpdateState} 
+              offset={1} 
+              Title={'Select Group'} 
+              Selected={this.state.SelectGroup} 
+              Selection={this.state.SelectFilter} 
+              ItemList={['Active Units','Prelauched Units','Leisure','Active & Deactivated Units FYTD','Active & Deactived Units','Example 1','Example 2', 'Example 3']} 
+            />
+            <TagList 
+              UpdateState={this.UpdateState} 
+              offset={6} 
+              Title='Selected Units' 
+              Selected={this.state.SelectedUnits} 
+              Selection={['0100 - Restaurant, Stevenage','1020 - Resturant, Leicester Square','1030 - Restaurant, Inverness','1060 - Restaurant, Charing Cross','1090 -  Resturant, London','Example 1','Example 2','Example 3'].length + ' unit'} 
+              ItemList={['0100 - Restaurant, Stevenage','1020 - Resturant, Leicester Square','1030 - Restaurant, Inverness','1060 - Restaurant, Charing Cross','1090 -  Resturant, London','Example 1','Example 2','Example 3']} 
+            />
           </div>
         </div>
 
