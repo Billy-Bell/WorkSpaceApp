@@ -33,16 +33,17 @@ const SelectList = (props: IProps) => {
 
     var show = true;
 
-    if (props.Selection) {
-        if (props.Selection.length > 0) {
-            var show = true; 
-            console.log(props.Selection);
-        } else {
-            var show = false; 
-        }
-    }
+    // if (props.Selection) {
+    //     if (props.Selection.length > 0) {
+    //         var show = true; 
+    //         console.log(props.Selection);
+    //     } else {
+    //         var show = false; 
+    //     }
+    // }
     return (
-        <div className={'col-5 pt-5 ' + (!show? 'd-none ' : '') + (props.offset? 'offset-' + props.offset : '' )} >
+        <div className={'col-5 pt-5 ' //+ (!show? 'd-none ' : '') 
+        + (props.offset? 'offset-' + props.offset : '' )} >
             <tag-text
             type='h2'
             text={props.Selection ? props.Title + ' > ' + props.Selection : props.Title}
