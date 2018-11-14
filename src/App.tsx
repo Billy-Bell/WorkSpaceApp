@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
-import TagList from './Components/TagList';
+import SelectList from './Components/SelectList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import logo from './logo.svg';
 import './App.css';
 
@@ -43,14 +45,14 @@ class App extends React.Component {
         <tag-top-navbar name="Access" />
         <div className='container ' >
           <div className='row'>
-            <TagList 
+            <SelectList 
               UpdateState={this.UpdateState} 
               displayText={true} 
               Title='Select Filter' 
               Selected={this.state.SelectFilter} 
               ItemList={['Unit Group Selection','Area Manager','Exec Chefs','Escalation Desk','General Manager','Project Manager -Pubs']} 
             />
-            <TagList 
+            <SelectList 
               UpdateState={this.UpdateState} 
               offset={1} 
               Title={'Select Group'} 
@@ -58,7 +60,7 @@ class App extends React.Component {
               Selection={this.state.SelectFilter} 
               ItemList={['Active Units','Prelauched Units','Leisure','Active & Deactivated Units FYTD','Active & Deactived Units','Example 1','Example 2', 'Example 3']} 
             />
-            <TagList 
+            <SelectList 
               UpdateState={this.UpdateState} 
               offset={6} 
               Title='Selected Units' 

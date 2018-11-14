@@ -37,11 +37,12 @@
 }
 
 .SelectItem {
-  border-bottom: black solid 1px;
+  border-bottom: lightgrey solid 1px;
+  border-right: lightgrey solid 1px;
 }
 
 .SelectBox {
-  border: black solid 1px;
+  border: lightgrey solid 1px;
   max-height: 195px;
   overflow-y: scroll;
 }
