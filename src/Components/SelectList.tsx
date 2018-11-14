@@ -31,22 +31,35 @@ const SelectList = (props: IProps) => {
 
     console.log('props Selection ' + props.Selection)
 
-    var show = true;
+    var show = false;
 
-    // if (props.Selection) {
-    //     if (props.Selection.length > 0) {
-    //         var show = true; 
-    //         console.log(props.Selection);
-    //     } else {
-    //         var show = false; 
-    //     }
-    // }
+     if (props.Selection) {
+        if (props.Selection.length > 0) {
+            var show = true; 
+            console.log(props.Selection);
+        } else {
+            var show = false; 
+        }
+    }
+
+    function SelectedText() {
+        if (props.Title === 'Selected Units') {
+            return props.Title + ' > ' + props.ItemList.length + ' units';
+        } else {
+            if (props.Selection && props.Selection !== ' ') { 
+                return props.Title + ' > ' + props.Selection;
+            } else { 
+                return props.Title ;
+            }
+        }
+    }
+
     return (
-        <div className={'col-5 pt-5 ' //+ (!show? 'd-none ' : '') 
+        <div className={'col-5 pt-5 ' + (!show? 'd-none ' : '') 
         + (props.offset? 'offset-' + props.offset : '' )} >
             <tag-text
             type='h2'
-            text={props.Selection ? props.Title + ' > ' + props.Selection : props.Title}
+            text={SelectedText()}
             accent='title'>
             </tag-text>
             <div className='SelectBox mt-1'>
@@ -54,11 +67,9 @@ const SelectList = (props: IProps) => {
                 var name = 'Option_' + item;
                 name = name.replace(' ','');
                 var selected = false;
-
                 if (props.Selected === item) {
                     selected = true;
                 } 
-
                return (
                 
                 <div key={i} id={name} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 ' + (selected ? 'SelectedItem' : '')} style={{minHeight:'40px', maxHeight:'50px', padding: '0', cursor: 'pointer',  }} >
