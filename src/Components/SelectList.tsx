@@ -61,7 +61,7 @@ const SelectList = (props: IProps) => {
             text={SelectedText()}
             accent='title'>
             </tag-text>
-            <div className={'SelectBox mt-1' + (!show? 'd-none ' : '')}>
+            <div className={'SelectBox mt-1 '}>
             {props.ItemList.map(function(item,i) {
                 var name = 'Option_' + item;
                 name = name.replace(' ','');
@@ -71,7 +71,7 @@ const SelectList = (props: IProps) => {
                 } 
                return (
                 
-                <div key={i} id={name} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 ' + (selected ? 'SelectedItem' : '')} style={{minHeight:'40px', maxHeight:'50px', padding: '0', cursor: 'pointer',  }} >
+                <div key={i} id={name} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 '  + (!show? ' d-none ' : '') + (selected ? 'SelectedItem' : '')} style={{minHeight:'40px', maxHeight:'50px', padding: '0', cursor: 'pointer',  }} >
                     {item}
                     <span className={'float-right pr-2 '} >
                         <FontAwesomeIcon icon={faCaretRight} />
