@@ -55,14 +55,13 @@ const SelectList = (props: IProps) => {
     }
 
     return (
-        <div className={'col-5 pt-5 ' + (!show? 'd-none ' : '') 
-        + (props.offset? 'offset-' + props.offset : '' )} >
+        <div className={'col-5 pt-5 ' + (props.offset? 'offset-' + props.offset : '' )} >
             <tag-text
             type='h2'
             text={SelectedText()}
             accent='title'>
             </tag-text>
-            <div className='SelectBox mt-1'>
+            <div className={'SelectBox mt-1' + (!show? 'd-none ' : '')}>
             {props.ItemList.map(function(item,i) {
                 var name = 'Option_' + item;
                 name = name.replace(' ','');
