@@ -44,5 +44,6 @@
 .SelectBox {
   border: lightgrey solid 1px;
   max-height: 195px;
+  min-height: 100px;
   overflow-y: scroll;
 }
