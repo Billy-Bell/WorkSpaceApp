@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon, Props } from '@fortawesome/react-fontawesome'
 import { faCoffee, faCaretRight } from '@fortawesome/free-solid-svg-icons'
 import { NONAME } from 'dns';
+import { StateName } from '../App';
 
 export interface IProps {
     ItemList: string[];
     Title: string;
-    UpdateState: (stateName: string, value: string) => void;
+    UpdateState: (stateName: StateName, value: string) => void;
     offset?: number;
     Selection?: string,
     Selected?: string;
     displayText?: boolean;
-    
+    section: StateName;
 }
 
 const SelectList = (props: IProps) => {
 
-    var section: string = props.Title;
-    section = section.replace(' ','');
 
-    function HandleUpdate(Section: string, Value:any ) {
+    var section = props.section;
+    
+    function HandleUpdate(Section: StateName, Value :string ) {
         props.UpdateState(Section, Value )
     };
 
@@ -31,14 +32,14 @@ const SelectList = (props: IProps) => {
 
     console.log('props Selection ' + props.Selection)
 
-    var show = false;
+    let show = false;
 
      if (props.Selection) {
         if (props.Selection.length > 0) {
-            var show = true; 
+            let show = true; 
             console.log(props.Selection);
         } else {
-            var show = false; 
+            let show = false; 
         }
     }
 

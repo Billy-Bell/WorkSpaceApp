@@ -6,19 +6,48 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import logo from './logo.svg';
 import './App.css';
 
-export interface IState {
-  SelectFilter :  string;
+export interface Data {
 
-
+  readonly SelectFilter: {
+    SelectFilter: string[]
+    [key: string] : string[];
+  }
+  readonly SelectGroup: {
+    ActiveUnits: string[],
+    PrelauchedUnits : string[],
+    Leisure: string[],
+    ActiveDeactivatedUnitsFYTD :string[] 
+    [key: string] : string[];
+  }
+  readonly SelectedUnits: {
+    ActiveUnits: string[],
+    PrelauchedUnits : string[],
+    Leisure: string[],
+    ActiveDeactivatedUnitsFYTD :string[]
+    [key: string] : string[];
+  }
 }
 
-export interface IUpdateState {
-  UpdateState: (stateName: string, value: string) => void;
+export interface MyClassProps {
+  readonly data: Data;
 }
 
-class App extends React.Component {
+export enum StateName {
+  SelectFilter = 'SelectFilter',
+  SelectGroup = 'SelectGroup',
+  SelectedUnits = 'SelectedUnits'
+}
 
-  constructor (props: any) {
+export interface MyClassState {
+ SelectFilter : string;
+ SelectGroup: string;
+ SelectedUnits: string;
+ [key : string] : string;
+}
+
+class App extends React.Component<MyClassProps, MyClassState> {
+
+  constructor (props: MyClassProps) {
     super(props);
 
     this.UpdateState = this.UpdateState.bind(this);
@@ -30,28 +59,26 @@ class App extends React.Component {
     SelectedUnits: '',
     
   }
-  
-  public data = {
-    SelectFilter: ['Active Units','Prelauched Units','Leisure','Active & Deactivated Units FYTD','Active & Deactived Units','Example 1','Example 2', 'Example 3'],
-    
-    SelectGroup: { 
-      Activeunits : ['Active Units','Prelauched Units','Leisure','Active & Deactivated Units FYTD','Active & Deactived Units','Example 1','Example 2', 'Example 3'],
-      PrelauchedUnits : ['PrelauchedUnits1','PrelauchedUnits2','PrelauchedUnits3','PrelauchedUnits4','PrelauchedUnits5','PrelauchedUnits6','PrelauchedUnits7', 'PrelauchedUnits8'],
-      Leisure : ['Leisure1','Leisure2','Leisure3','Leisure4','Leisure5','Leisure6','Leisure7', 'Leisure8'],
-      ActiveDeactivatedUnitsFYTD : ['Active&DeactivatedUnitsFYTD1','Active&DeactivatedUnitsFYTD2','Active&DeactivatedUnitsFYTD3','Active&DeactivatedUnitsFYTD4','Active&DeactivatedUnitsFYTD5','Active&DeactivatedUnitsFYTD6','Active&DeactivatedUnitsFYTD7', 'Active&DeactivatedUnitsFYTD8'],
-    },
-    
-    SelectedUnits : {
-      Activeunits: ['0100 - Restaurant, Stevenage','1020 - Resturant, Leicester Square','1030 - Restaurant, Inverness','1060 - Restaurant, Charing Cross','1090 -  Resturant, London','Example 1','Example 2','Example 3'],
-      PrelauchedUnits : ['PrelauchedUnits1','PrelauchedUnits2','PrelauchedUnits3','PrelauchedUnits4','PrelauchedUnits5','PrelauchedUnits6','PrelauchedUnits7', 'PrelauchedUnits8'],
-      Leisure : ['Leisure1','Leisure2','Leisure3','Leisure4','Leisure5','Leisure6','Leisure7', 'Leisure8'],
-      ActiveDeactivatedUnitsFYTD : ['Active&DeactivatedUnitsFYTD1','Active&DeactivatedUnitsFYTD2','Active&DeactivatedUnitsFYTD3','Active&DeactivatedUnitsFYTD4','Active&DeactivatedUnitsFYTD5','Active&DeactivatedUnitsFYTD6','Active&DeactivatedUnitsFYTD7', 'Active&DeactivatedUnitsFYTD8'],
-    },
+
+  public UpdateState(stateName: StateName, value: string) {
+      this.setState({[stateName]: value.replace('&amp;','&')})
+      this.setState({SelectFilter: value})
   }
 
-  public UpdateState(stateName: string, value: string) {
-      this.setState({[stateName]: value.replace('&amp;','&')})
+  public dataCheck(val:'SelectFilter'|'SelectGroup'|'SelectedUnits',val2:'SelectFilter'|'SelectGroup'|'SelectedUnits') {
+
+    if (this.state[val2] !== '' //check statevalue is not ''
+    && (this.props.data[val]).hasOwnProperty(this.state[val2]) //check this.state[val2] is a key in this.data[val]
+    && (this.props.data).hasOwnProperty(this.state[val2]) //check val is a key in this.data[val]
+    ) {
+      return this.props.data[val][val2]
+    } else {
+      return [''];
+    }
+
   }
+
+  console.log(this.props.data.SelectFilter.SelectFilter)
 
   render() {
     return (
@@ -59,26 +86,30 @@ class App extends React.Component {
         <tag-top-navbar name="Access" />
         <div className='container ' >
           <div className='row'>
+            {console.log(this.dataCheck('SelectGroup','SelectFilter'))}
             <SelectList 
               UpdateState={this.UpdateState} 
               displayText={true} 
               Title='Select Filter' 
+              section={StateName.SelectFilter}
               Selected={this.state.SelectFilter} 
               Selection={' '}
-              ItemList={this.data.SelectFilter} 
+              ItemList={this.props.data.SelectFilter.SelectFilter} 
             />
             <SelectList 
               UpdateState={this.UpdateState} 
               offset={1} 
               Title={'Select Group'} 
+              section={StateName.SelectGroup}
               Selected={this.state.SelectGroup} 
               Selection={this.state.SelectFilter} 
-              ItemList={this.data.SelectGroup.Activeunits} 
+              ItemList={this.props.data.SelectGroup.ActiveUnits} 
             />
             <SelectList 
               UpdateState={this.UpdateState} 
               offset={6} 
               Title='Selected Units' 
+              section={StateName.SelectedUnits}
               Selected={this.state.SelectedUnits} 
               Selection={this.state.SelectGroup} 
               ItemList={['0100 - Restaurant, Stevenage','1020 - Resturant, Leicester Square','1030 - Restaurant, Inverness','1060 - Restaurant, Charing Cross','1090 -  Resturant, London','Example 1','Example 2','Example 3']} 
