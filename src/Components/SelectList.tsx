@@ -9,7 +9,7 @@ export interface IProps {
     Title: string;
     UpdateState: (stateName: StateName, value: string) => void;
     offset?: number;
-    Selection?: string,
+    Selection?: string | boolean;
     Selected?: string;
     displayText?: boolean;
     section: StateName;
@@ -19,27 +19,25 @@ const SelectList = (props: IProps) => {
 
 
     var section = props.section;
+
+    {//console.log(props.section)
+    }
     
     function HandleUpdate(Section: StateName, Value :string ) {
+        console.log('Section: ' + section + ' Value: ' + Value);
         props.UpdateState(Section, Value )
     };
 
     if (props.displayText) {
         props.Selection ? props.Title + ' > ' + props.Selection : props.Title
-    } else {
+    } else if (typeof props.Selection === 'string') {
         props.Selection ? props.Title + ' > ' + props.Selection.length + ' selected' : props.Title
     }
 
-    console.log('props Selection ' + props.Selection)
-
-    let show = false;
-
      if (props.Selection) {
-        if (props.Selection.length > 0) {
-            let show = true; 
-            console.log(props.Selection);
-        } else {
-            let show = false; 
+        if (props.Selection || props.Selection.length > 0 )  {
+            var show = true; 
+
         }
     }
 
@@ -55,6 +53,19 @@ const SelectList = (props: IProps) => {
         }
     }
 
+  
+    function selected(item:string) {
+        console.log(item);
+        while (item.indexOf(' ')>-1) {
+            item=item.replace(' ','');
+        }
+        if (props.Selected === item) {
+            return true;
+        } 
+        return false;
+    }
+
+
     return (
         <div className={'col-5 pt-5 ' + (props.offset? 'offset-' + props.offset : '' )} >
             <tag-text
@@ -64,15 +75,10 @@ const SelectList = (props: IProps) => {
             </tag-text>
             <div className={'SelectBox mt-1 '}>
             {props.ItemList.map(function(item,i) {
-                var name = 'Option_' + item;
-                name = name.replace(' ','');
-                var selected = false;
-                if (props.Selected === item) {
-                    selected = true;
-                } 
                return (
                 
-                <div key={i} id={name} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 '  + (!show? ' d-none ' : '') + (selected ? 'SelectedItem' : '')} style={{minHeight:'40px', maxHeight:'50px', padding: '0', cursor: 'pointer',  }} >
+                <div key={i} id={name} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 '  + (!show? ' d-none ' : '') 
+                + (selected(item) ? 'SelectedItem' : '')} style={{minHeight:'40px', maxHeight:'50px', padding: '0', cursor: 'pointer',  }} >
                     {item}
                     <span className={'float-right pr-2 '} >
                         <FontAwesomeIcon icon={faCaretRight} />

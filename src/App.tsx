@@ -61,8 +61,15 @@ class App extends React.Component<MyClassProps, MyClassState> {
   }
 
   public UpdateState(stateName: StateName, value: string) {
-      this.setState({[stateName]: value.replace('&amp;','&')})
-      this.setState({SelectFilter: value})
+      value = value.replace('&amp;','&')
+      while (value.indexOf(' ') > -1) {
+        value = value.replace(' ','');
+      }
+      if (this.state[stateName] === value ){
+        this.setState({[stateName]: ''})
+      } else {
+      this.setState({[stateName]: value})
+      }
   }
 
   public dataCheck(val:'SelectFilter'|'SelectGroup'|'SelectedUnits',val2:'SelectFilter'|'SelectGroup'|'SelectedUnits') {
@@ -71,6 +78,7 @@ class App extends React.Component<MyClassProps, MyClassState> {
     && (this.props.data[val]).hasOwnProperty(this.state[val2]) //check this.state[val2] is a key in this.data[val]
     && (this.props.data).hasOwnProperty(this.state[val2]) //check val is a key in this.data[val]
     ) {
+
       return this.props.data[val][val2]
     } else {
       return [''];
@@ -78,7 +86,7 @@ class App extends React.Component<MyClassProps, MyClassState> {
 
   }
 
-  console.log(this.props.data.SelectFilter.SelectFilter)
+  //console.log(this.props.data.SelectFilter.SelectFilter)
 
   render() {
     return (
@@ -86,7 +94,8 @@ class App extends React.Component<MyClassProps, MyClassState> {
         <tag-top-navbar name="Access" />
         <div className='container ' >
           <div className='row'>
-            {console.log(this.dataCheck('SelectGroup','SelectFilter'))}
+            {//console.log(this.dataCheck('SelectGroup','SelectFilter'))
+            }
             <SelectList 
               UpdateState={this.UpdateState} 
               displayText={true} 
@@ -103,7 +112,7 @@ class App extends React.Component<MyClassProps, MyClassState> {
               section={StateName.SelectGroup}
               Selected={this.state.SelectGroup} 
               Selection={this.state.SelectFilter} 
-              ItemList={this.props.data.SelectGroup.ActiveUnits} 
+              ItemList={(this.props.data.SelectGroup[this.state.SelectFilter]? this.props.data.SelectGroup[this.state.SelectFilter]: [''])} 
             />
             <SelectList 
               UpdateState={this.UpdateState} 
@@ -112,7 +121,7 @@ class App extends React.Component<MyClassProps, MyClassState> {
               section={StateName.SelectedUnits}
               Selected={this.state.SelectedUnits} 
               Selection={this.state.SelectGroup} 
-              ItemList={['0100 - Restaurant, Stevenage','1020 - Resturant, Leicester Square','1030 - Restaurant, Inverness','1060 - Restaurant, Charing Cross','1090 -  Resturant, London','Example 1','Example 2','Example 3']} 
+              ItemList={(this.props.data.SelectedUnits[this.state.SelectGroup]? this.props.data.SelectedUnits[this.state.SelectGroup]: [''])} 
             />
           </div>
         </div>
