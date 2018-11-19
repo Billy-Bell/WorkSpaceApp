@@ -65,9 +65,17 @@ class App extends React.Component<MyClassProps, MyClassState> {
       }
       if (this.state[stateName] === value ){
         this.setState({[stateName]: ''})
+        if (stateName === 'SelectFilter') {
+          this.setState({SelectGroup: '', SelectedUnits: ''})
+        }
+        if (stateName === 'SelectGroup') {
+          this.setState({SelectedUnits: ''})
+        }
       } else {
       this.setState({[stateName]: value})
       }
+
+      
   }
 
   public dataCheck(val:'SelectFilter'|'SelectGroup'|'SelectedUnits',val2:'SelectFilter'|'SelectGroup'|'SelectedUnits') {
