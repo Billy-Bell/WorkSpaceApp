@@ -24,25 +24,14 @@ const SelectList = (props: IProps) => {
     }
     
     function HandleUpdate(Section: StateName, Value :string ) {
-        console.log('Section: ' + section + ' Value: ' + Value);
+        //console.log('Section: ' + section + ' Value: ' + Value);
         props.UpdateState(Section, Value )
     };
 
-    if (props.displayText) {
-        props.Selection ? props.Title + ' > ' + props.Selection : props.Title
-    } else if (typeof props.Selection === 'string') {
-        props.Selection ? props.Title + ' > ' + props.Selection.length + ' selected' : props.Title
-    }
 
-     if (props.Selection) {
-        if (props.Selection || props.Selection.length > 0 )  {
-            var show = true; 
-
-        }
-    }
 
     function SelectedText() {
-        if (props.Title === 'Selected Units') {
+        if (props.Title === 'Selected Units' && props.ItemList.length > 1) {
             return props.Title + ' > ' + props.ItemList.length + ' units';
         } else {
             if (props.Selection && props.Selection !== ' ') { 
@@ -65,6 +54,18 @@ const SelectList = (props: IProps) => {
         return false;
     }
 
+    function ShowOption() {
+
+        if (props.Selection) {
+            if (props.Selection || props.Selection.length > 0 )  {
+                return false; 
+    
+            }
+        }
+
+        return true;
+    }
+
 
     return (
         <div className={'col-5 pt-5 ' + (props.offset? 'offset-' + props.offset : '' )} >
@@ -77,7 +78,7 @@ const SelectList = (props: IProps) => {
             {props.ItemList.map(function(item,i) {
                return (
                 
-                <div key={i} id={name} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 '  + (!show? ' d-none ' : '') 
+                <div key={i} id={name} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 '  + (ShowOption()? ' d-none ' : '') 
                 + (selected(item) ? 'SelectedItem' : '')} style={{minHeight:'40px', maxHeight:'50px', padding: '0', cursor: 'pointer',  }} >
                     {item}
                     <span className={'float-right pr-2 '} >
