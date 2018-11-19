@@ -17,18 +17,11 @@ export interface IProps {
 
 const SelectList = (props: IProps) => {
 
-
     var section = props.section;
-
-    {//console.log(props.section)
-    }
     
     function HandleUpdate(Section: StateName, Value :string ) {
-        //console.log('Section: ' + section + ' Value: ' + Value);
         props.UpdateState(Section, Value )
     };
-
-
 
     function SelectedText() {
         if (props.Title === 'Selected Units' && props.ItemList.length > 1) {
@@ -41,10 +34,8 @@ const SelectList = (props: IProps) => {
             }
         }
     }
-
   
     function selected(item:string) {
-        console.log(item);
         while (item.indexOf(' ')>-1) {
             item=item.replace(' ','');
         }
@@ -59,13 +50,10 @@ const SelectList = (props: IProps) => {
         if (props.Selection) {
             if (props.Selection || props.Selection.length > 0 )  {
                 return false; 
-    
             }
         }
-
         return true;
     }
-
 
     return (
         <div className={'col-5 pt-5 ' + (props.offset? 'offset-' + props.offset : '' )} >

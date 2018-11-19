@@ -49,7 +49,6 @@ class App extends React.Component<MyClassProps, MyClassState> {
 
   constructor (props: MyClassProps) {
     super(props);
-
     this.UpdateState = this.UpdateState.bind(this);
   }
 
@@ -57,7 +56,6 @@ class App extends React.Component<MyClassProps, MyClassState> {
     SelectFilter: '',
     SelectGroup: '',
     SelectedUnits: '',
-    
   }
 
   public UpdateState(stateName: StateName, value: string) {
@@ -73,20 +71,15 @@ class App extends React.Component<MyClassProps, MyClassState> {
   }
 
   public dataCheck(val:'SelectFilter'|'SelectGroup'|'SelectedUnits',val2:'SelectFilter'|'SelectGroup'|'SelectedUnits') {
-
     if (this.state[val2] !== '' //check statevalue is not ''
     && (this.props.data[val]).hasOwnProperty(this.state[val2]) //check this.state[val2] is a key in this.data[val]
     && (this.props.data).hasOwnProperty(this.state[val2]) //check val is a key in this.data[val]
     ) {
-
       return this.props.data[val][val2]
     } else {
       return [''];
     }
-
   }
-
-  //console.log(this.props.data.SelectFilter.SelectFilter)
 
   render() {
     return (
@@ -94,8 +87,6 @@ class App extends React.Component<MyClassProps, MyClassState> {
         <tag-top-navbar name="Access" />
         <div className='container ' >
           <div className='row'>
-            {//console.log(this.dataCheck('SelectGroup','SelectFilter'))
-            }
             <SelectList 
               UpdateState={this.UpdateState} 
               displayText={true} 
