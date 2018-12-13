@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import SelectList from './Components/SelectList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -89,45 +90,72 @@ class App extends React.Component<MyClassProps, MyClassState> {
     }
   }
 
+  public redirect() {
+    if (this.state.SelectedUnits !== '') {
+      let path = (this.state.SelectedUnits).split('-')[0]
+      return (<Redirect to={'/app/units/' + path}/> )
+    }
+  }
+
+  public resetState() {
+    this.setState({    
+      SelectFilter: '',
+      SelectGroup: '',
+      SelectedUnits: ''
+    })
+  }
+
   render() {
     return (
-      <div className='vh-100 bg-light' >
-        <tag-top-navbar name="Access" />
-        <div className='container ' >
-          <div className='row'>
-            <SelectList 
-              UpdateState={this.UpdateState} 
-              displayText={true} 
-              Title='Select Filter' 
-              section={StateName.SelectFilter}
-              Selected={this.state.SelectFilter} 
-              Selection={' '}
-              ItemList={this.props.data.SelectFilter.SelectFilter} 
-            />
-            <SelectList 
-              UpdateState={this.UpdateState} 
-              offset={1} 
-              Title={'Select Group'} 
-              section={StateName.SelectGroup}
-              Selected={this.state.SelectGroup} 
-              Selection={this.state.SelectFilter} 
-              ItemList={(this.props.data.SelectGroup[this.state.SelectFilter]? this.props.data.SelectGroup[this.state.SelectFilter]: [''])} 
-            />
-            <SelectList 
-              UpdateState={this.UpdateState} 
-              offset={6} 
-              Title='Selected Units' 
-              section={StateName.SelectedUnits}
-              Selected={this.state.SelectedUnits} 
-              Selection={this.state.SelectGroup} 
-              ItemList={(this.props.data.SelectedUnits[this.state.SelectGroup]? this.props.data.SelectedUnits[this.state.SelectGroup]: [''])} 
-            />
-          </div>
+      <Router>
+        <div className='vh-100 bg-light' >
+          <tag-top-navbar name="Access" />
+          <Route exact path='/' render={()=> (
+            <div className='container ' >
+              <div className='row'>
+                <SelectList 
+                  UpdateState={this.UpdateState} 
+                  displayText={true} 
+                  Title='Select Filter' 
+                  section={StateName.SelectFilter}
+                  Selected={this.state.SelectFilter} 
+                  Selection={' '}
+                  ItemList={this.props.data.SelectFilter.SelectFilter} 
+                />
+                <SelectList 
+                  UpdateState={this.UpdateState} 
+                  offset={1} 
+                  Title={'Select Group'} 
+                  section={StateName.SelectGroup}
+                  Selected={this.state.SelectGroup} 
+                  Selection={this.state.SelectFilter} 
+                  ItemList={(this.props.data.SelectGroup[this.state.SelectFilter]? this.props.data.SelectGroup[this.state.SelectFilter]: [''])} 
+                />
+                <SelectList 
+                  UpdateState={this.UpdateState} 
+                  offset={6} 
+                  Title='Selected Units' 
+                  section={StateName.SelectedUnits}
+                  Selected={this.state.SelectedUnits} 
+                  Selection={this.state.SelectGroup} 
+                  ItemList={(this.props.data.SelectedUnits[this.state.SelectGroup]? this.props.data.SelectedUnits[this.state.SelectGroup]: [''])} 
+                />
+              </div>
+            </div>
+          )} />
+          <Route path='/app/units/:unitNumber' render={({match}) => (
+            <div className='text-center'>
+              <h1>{match.params.unitNumber}</h1>
+              <Link to='/' onClick={(e) => this.resetState()}>Reset</Link>
+            </div>
+          )} />
+          {this.redirect()}
         </div>
-
-      </div>
+      </Router>
     );
   }
 }
+
+
 
 export default App;
