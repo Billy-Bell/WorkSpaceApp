@@ -7,6 +7,8 @@ import toJson from 'enzyme-to-json';
 
 configure({adapter: new Adapter() })
 
+let location = window.location;
+
 const data = {
   SelectFilter: {
     SelectFilter: ['Active Units','Prelauched Units','Leisure','Active & Deactivated Units FYTD','Active & Deactived Units','Example 1','Example 2', 'Example 3'],
@@ -168,6 +170,14 @@ describe('<App /> mount rendering', () => {
     const wrapper = mount(<App data={data}/>);
     wrapper.setState({SelectFilter:"ActiveUnits",SelectGroup:"ActiveUnits"})
     expect(toJson(wrapper)).toMatchSnapshot()
+    wrapper.unmount;
+  })
+
+  it('Match snapshot on SelectedUnit Selection', () => {
+    const wrapper = mount(<App data={data}/>);
+    wrapper.setState({SelectFilter:"ActiveUnits",SelectGroup:"ActiveUnits",SelectedUnits:"0100-Restaurant,Stevenage"})
+    expect(location.pathname).toBe('/app/units/0100')
+
     wrapper.unmount;
   })
 

@@ -144,7 +144,7 @@ class App extends React.Component<MyClassProps, MyClassState> {
             </div>
           )} />
           <Route path='/app/units/:unitNumber' render={({match}) => (
-            <div className='text-center'>
+            <div id='appUnitsPath' className='text-center'>
               <h1>{match.params.unitNumber}</h1>
               <Link to='/' onClick={(e) => this.resetState()}>Reset</Link>
             </div>
