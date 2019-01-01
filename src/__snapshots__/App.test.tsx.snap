@@ -1,0 +1,2800 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> Shallow rendering matches snapshot 1`] = `
+<BrowserRouter>
+  <div
+    className="vh-100 bg-light"
+  >
+    <tag-top-navbar
+      name="Access"
+    />
+    <Route
+      exact={true}
+      path="/"
+      render={[Function]}
+    />
+    <Route
+      path="/app/units/:unitNumber"
+      render={[Function]}
+    />
+  </div>
+</BrowserRouter>
+`;
+
+exports[`<App /> mount rendering Match snapshot on Active units selections 1`] = `
+<App
+  data={
+    Object {
+      "SelectFilter": Object {
+        "SelectFilter": Array [
+          "Active Units",
+          "Prelauched Units",
+          "Leisure",
+          "Active & Deactivated Units FYTD",
+          "Active & Deactived Units",
+          "Example 1",
+          "Example 2",
+          "Example 3",
+        ],
+      },
+      "SelectGroup": Object {
+        "ActiveDeactivatedUnitsFYTD": Array [
+          "Active&DeactivatedUnitsFYTD1",
+          "Active&DeactivatedUnitsFYTD2",
+          "Active&DeactivatedUnitsFYTD3",
+          "Active&DeactivatedUnitsFYTD4",
+          "Active&DeactivatedUnitsFYTD5",
+          "Active&DeactivatedUnitsFYTD6",
+          "Active&DeactivatedUnitsFYTD7",
+          "Active&DeactivatedUnitsFYTD8",
+        ],
+        "ActiveUnits": Array [
+          "Active Units",
+          "Prelauched Units",
+          "Leisure",
+          "Active & Deactivated Units FYTD",
+          "Active & Deactived Units",
+          "Example 1",
+          "Example 2",
+          "Example 3",
+        ],
+        "Leisure": Array [
+          "Leisure1",
+          "Leisure2",
+          "Leisure3",
+          "Leisure4",
+          "Leisure5",
+          "Leisure6",
+          "Leisure7",
+          "Leisure8",
+        ],
+        "PrelauchedUnits": Array [
+          "PrelauchedUnits1",
+          "PrelauchedUnits2",
+          "PrelauchedUnits3",
+          "PrelauchedUnits4",
+          "PrelauchedUnits5",
+          "PrelauchedUnits6",
+          "PrelauchedUnits7",
+          "PrelauchedUnits8",
+        ],
+      },
+      "SelectedUnits": Object {
+        "ActiveDeactivatedUnitsFYTD": Array [
+          "Active&DeactivatedUnitsFYTD1",
+          "Active&DeactivatedUnitsFYTD2",
+          "Active&DeactivatedUnitsFYTD3",
+          "Active&DeactivatedUnitsFYTD4",
+          "Active&DeactivatedUnitsFYTD5",
+          "Active&DeactivatedUnitsFYTD6",
+          "Active&DeactivatedUnitsFYTD7",
+          "Active&DeactivatedUnitsFYTD8",
+        ],
+        "ActiveUnits": Array [
+          "0100 - Restaurant, Stevenage",
+          "1020 - Resturant, Leicester Square",
+          "1030 - Restaurant, Inverness",
+          "1060 - Restaurant, Charing Cross",
+          "1090 -  Resturant, London",
+          "Example 1",
+          "Example 2",
+          "Example 3",
+        ],
+        "Leisure": Array [
+          "Leisure1",
+          "Leisure2",
+          "Leisure3",
+          "Leisure4",
+          "Leisure5",
+          "Leisure6",
+          "Leisure7",
+          "Leisure8",
+        ],
+        "PrelauchedUnits": Array [
+          "PrelauchedUnits1",
+          "PrelauchedUnits2",
+          "PrelauchedUnits3",
+          "PrelauchedUnits4",
+          "PrelauchedUnits5",
+          "PrelauchedUnits6",
+          "PrelauchedUnits7",
+          "PrelauchedUnits8",
+        ],
+      },
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <div
+        className="vh-100 bg-light"
+      >
+        <tag-top-navbar
+          name="Access"
+        />
+        <Route
+          exact={true}
+          path="/"
+          render={[Function]}
+        >
+          <div
+            className="container "
+          >
+            <div
+              className="row"
+            >
+              <SelectList
+                ItemList={
+                  Array [
+                    "Active Units",
+                    "Prelauched Units",
+                    "Leisure",
+                    "Active & Deactivated Units FYTD",
+                    "Active & Deactived Units",
+                    "Example 1",
+                    "Example 2",
+                    "Example 3",
+                  ]
+                }
+                Selected="ActiveUnits"
+                Selection=" "
+                Title="Select Filter"
+                UpdateState={[Function]}
+                displayText={true}
+                section="SelectFilter"
+              >
+                <div
+                  className="col-5 pt-5 "
+                >
+                  <tag-text
+                    accent="title"
+                    text="Select Filter"
+                    type="h2"
+                  />
+                  <div
+                    className="SelectBox mt-1 SelectFilter"
+                  >
+                    <div
+                      className="align-right SelectItem p-2 SelectedItem"
+                      id="ActiveUnits"
+                      key="0"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="PrelauchedUnits"
+                      key="1"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Prelauched Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Leisure"
+                      key="2"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Leisure
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Active&DeactivatedUnitsFYTD"
+                      key="3"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active & Deactivated Units FYTD
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Active&DeactivedUnits"
+                      key="4"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active & Deactived Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example1"
+                      key="5"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 1
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example2"
+                      key="6"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 2
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example3"
+                      key="7"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 3
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SelectList>
+              <SelectList
+                ItemList={
+                  Array [
+                    "Active Units",
+                    "Prelauched Units",
+                    "Leisure",
+                    "Active & Deactivated Units FYTD",
+                    "Active & Deactived Units",
+                    "Example 1",
+                    "Example 2",
+                    "Example 3",
+                  ]
+                }
+                Selected="ActiveUnits"
+                Selection="ActiveUnits"
+                Title="Select Group"
+                UpdateState={[Function]}
+                offset={1}
+                section="SelectGroup"
+              >
+                <div
+                  className="col-5 pt-5 offset-1"
+                >
+                  <tag-text
+                    accent="title"
+                    text="Select Group > ActiveUnits"
+                    type="h2"
+                  />
+                  <div
+                    className="SelectBox mt-1 SelectGroup"
+                  >
+                    <div
+                      className="align-right SelectItem p-2 SelectedItem"
+                      id="ActiveUnits"
+                      key="0"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="PrelauchedUnits"
+                      key="1"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Prelauched Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Leisure"
+                      key="2"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Leisure
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Active&DeactivatedUnitsFYTD"
+                      key="3"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active & Deactivated Units FYTD
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Active&DeactivedUnits"
+                      key="4"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active & Deactived Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example1"
+                      key="5"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 1
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example2"
+                      key="6"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 2
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example3"
+                      key="7"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 3
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SelectList>
+              <SelectList
+                ItemList={
+                  Array [
+                    "0100 - Restaurant, Stevenage",
+                    "1020 - Resturant, Leicester Square",
+                    "1030 - Restaurant, Inverness",
+                    "1060 - Restaurant, Charing Cross",
+                    "1090 -  Resturant, London",
+                    "Example 1",
+                    "Example 2",
+                    "Example 3",
+                  ]
+                }
+                Selected=""
+                Selection="ActiveUnits"
+                Title="Selected Units"
+                UpdateState={[Function]}
+                offset={6}
+                section="SelectedUnits"
+              >
+                <div
+                  className="col-5 pt-5 offset-6"
+                >
+                  <tag-text
+                    accent="title"
+                    text="Selected Units > 8 units"
+                    type="h2"
+                  />
+                  <div
+                    className="SelectBox mt-1 SelectedUnits"
+                  >
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="0100-Restaurant,Stevenage"
+                      key="0"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      0100 - Restaurant, Stevenage
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="1020-Resturant,LeicesterSquare"
+                      key="1"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      1020 - Resturant, Leicester Square
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="1030-Restaurant,Inverness"
+                      key="2"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      1030 - Restaurant, Inverness
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="1060-Restaurant,CharingCross"
+                      key="3"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      1060 - Restaurant, Charing Cross
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="1090-Resturant,London"
+                      key="4"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      1090 -  Resturant, London
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example1"
+                      key="5"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 1
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example2"
+                      key="6"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 2
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example3"
+                      key="7"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 3
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SelectList>
+            </div>
+          </div>
+        </Route>
+        <Route
+          path="/app/units/:unitNumber"
+          render={[Function]}
+        />
+      </div>
+    </Router>
+  </BrowserRouter>
+</App>
+`;
+
+exports[`<App /> mount rendering matches snapshot 1`] = `
+<App
+  data={
+    Object {
+      "SelectFilter": Object {
+        "SelectFilter": Array [
+          "Active Units",
+          "Prelauched Units",
+          "Leisure",
+          "Active & Deactivated Units FYTD",
+          "Active & Deactived Units",
+          "Example 1",
+          "Example 2",
+          "Example 3",
+        ],
+      },
+      "SelectGroup": Object {
+        "ActiveDeactivatedUnitsFYTD": Array [
+          "Active&DeactivatedUnitsFYTD1",
+          "Active&DeactivatedUnitsFYTD2",
+          "Active&DeactivatedUnitsFYTD3",
+          "Active&DeactivatedUnitsFYTD4",
+          "Active&DeactivatedUnitsFYTD5",
+          "Active&DeactivatedUnitsFYTD6",
+          "Active&DeactivatedUnitsFYTD7",
+          "Active&DeactivatedUnitsFYTD8",
+        ],
+        "ActiveUnits": Array [
+          "Active Units",
+          "Prelauched Units",
+          "Leisure",
+          "Active & Deactivated Units FYTD",
+          "Active & Deactived Units",
+          "Example 1",
+          "Example 2",
+          "Example 3",
+        ],
+        "Leisure": Array [
+          "Leisure1",
+          "Leisure2",
+          "Leisure3",
+          "Leisure4",
+          "Leisure5",
+          "Leisure6",
+          "Leisure7",
+          "Leisure8",
+        ],
+        "PrelauchedUnits": Array [
+          "PrelauchedUnits1",
+          "PrelauchedUnits2",
+          "PrelauchedUnits3",
+          "PrelauchedUnits4",
+          "PrelauchedUnits5",
+          "PrelauchedUnits6",
+          "PrelauchedUnits7",
+          "PrelauchedUnits8",
+        ],
+      },
+      "SelectedUnits": Object {
+        "ActiveDeactivatedUnitsFYTD": Array [
+          "Active&DeactivatedUnitsFYTD1",
+          "Active&DeactivatedUnitsFYTD2",
+          "Active&DeactivatedUnitsFYTD3",
+          "Active&DeactivatedUnitsFYTD4",
+          "Active&DeactivatedUnitsFYTD5",
+          "Active&DeactivatedUnitsFYTD6",
+          "Active&DeactivatedUnitsFYTD7",
+          "Active&DeactivatedUnitsFYTD8",
+        ],
+        "ActiveUnits": Array [
+          "0100 - Restaurant, Stevenage",
+          "1020 - Resturant, Leicester Square",
+          "1030 - Restaurant, Inverness",
+          "1060 - Restaurant, Charing Cross",
+          "1090 -  Resturant, London",
+          "Example 1",
+          "Example 2",
+          "Example 3",
+        ],
+        "Leisure": Array [
+          "Leisure1",
+          "Leisure2",
+          "Leisure3",
+          "Leisure4",
+          "Leisure5",
+          "Leisure6",
+          "Leisure7",
+          "Leisure8",
+        ],
+        "PrelauchedUnits": Array [
+          "PrelauchedUnits1",
+          "PrelauchedUnits2",
+          "PrelauchedUnits3",
+          "PrelauchedUnits4",
+          "PrelauchedUnits5",
+          "PrelauchedUnits6",
+          "PrelauchedUnits7",
+          "PrelauchedUnits8",
+        ],
+      },
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <div
+        className="vh-100 bg-light"
+      >
+        <tag-top-navbar
+          name="Access"
+        />
+        <Route
+          exact={true}
+          path="/"
+          render={[Function]}
+        >
+          <div
+            className="container "
+          >
+            <div
+              className="row"
+            >
+              <SelectList
+                ItemList={
+                  Array [
+                    "Active Units",
+                    "Prelauched Units",
+                    "Leisure",
+                    "Active & Deactivated Units FYTD",
+                    "Active & Deactived Units",
+                    "Example 1",
+                    "Example 2",
+                    "Example 3",
+                  ]
+                }
+                Selected=""
+                Selection=" "
+                Title="Select Filter"
+                UpdateState={[Function]}
+                displayText={true}
+                section="SelectFilter"
+              >
+                <div
+                  className="col-5 pt-5 "
+                >
+                  <tag-text
+                    accent="title"
+                    text="Select Filter"
+                    type="h2"
+                  />
+                  <div
+                    className="SelectBox mt-1 SelectFilter"
+                  >
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="ActiveUnits"
+                      key="0"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="PrelauchedUnits"
+                      key="1"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Prelauched Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Leisure"
+                      key="2"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Leisure
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Active&DeactivatedUnitsFYTD"
+                      key="3"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active & Deactivated Units FYTD
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Active&DeactivedUnits"
+                      key="4"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Active & Deactived Units
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example1"
+                      key="5"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 1
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example2"
+                      key="6"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 2
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div
+                      className="align-right SelectItem p-2 "
+                      id="Example3"
+                      key="7"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      Example 3
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SelectList>
+              <SelectList
+                ItemList={
+                  Array [
+                    "",
+                  ]
+                }
+                Selected=""
+                Selection=""
+                Title="Select Group"
+                UpdateState={[Function]}
+                offset={1}
+                section="SelectGroup"
+              >
+                <div
+                  className="col-5 pt-5 offset-1"
+                >
+                  <tag-text
+                    accent="title"
+                    text="Select Group"
+                    type="h2"
+                  />
+                  <div
+                    className="SelectBox mt-1 SelectGroup"
+                  >
+                    <div
+                      className="align-right SelectItem p-2  d-none SelectedItem"
+                      id=""
+                      key="0"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SelectList>
+              <SelectList
+                ItemList={
+                  Array [
+                    "",
+                  ]
+                }
+                Selected=""
+                Selection=""
+                Title="Selected Units"
+                UpdateState={[Function]}
+                offset={6}
+                section="SelectedUnits"
+              >
+                <div
+                  className="col-5 pt-5 offset-6"
+                >
+                  <tag-text
+                    accent="title"
+                    text="Selected Units"
+                    type="h2"
+                  />
+                  <div
+                    className="SelectBox mt-1 SelectedUnits"
+                  >
+                    <div
+                      className="align-right SelectItem p-2  d-none SelectedItem"
+                      id=""
+                      key="0"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "cursor": "pointer",
+                          "maxHeight": "50px",
+                          "minHeight": "40px",
+                          "padding": "0",
+                        }
+                      }
+                    >
+                      <span
+                        className="float-right pr-2 "
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Object {
+                              "icon": Array [
+                                192,
+                                512,
+                                Array [],
+                                "f0da",
+                                "M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z",
+                              ],
+                              "iconName": "caret-right",
+                              "prefix": "fas",
+                            }
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        >
+                          <svg
+                            aria-hidden="true"
+                            className="svg-inline--fa fa-caret-right fa-w-6 "
+                            data-icon="caret-right"
+                            data-prefix="fas"
+                            role="img"
+                            style={Object {}}
+                            viewBox="0 0 192 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"
+                              fill="currentColor"
+                              style={Object {}}
+                            />
+                          </svg>
+                        </FontAwesomeIcon>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </SelectList>
+            </div>
+          </div>
+        </Route>
+        <Route
+          path="/app/units/:unitNumber"
+          render={[Function]}
+        />
+      </div>
+    </Router>
+  </BrowserRouter>
+</App>
+`;

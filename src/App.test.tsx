@@ -33,9 +33,142 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-describe('<App />', () => {
-  if('app shuold contain h2', () => {
-    const wrapper = shallow(<App data={data}/>)
-    expect(wrapper.find('h2').length).toBe(1);
+
+describe('<App /> Shallow rendering', () => {
+  it('matches snapshot', () => {
+    const wrapper = shallow(<App data={data}/>);
+    expect(toJson(wrapper)).toMatchSnapshot();
+    wrapper.unmount;
   })
+})
+
+describe('<App /> mount rendering', () => {
+  it('matches snapshot', () => {
+    const wrapper = mount(<App data={data}/>);
+    expect(toJson(wrapper)).toMatchSnapshot();
+    wrapper.unmount;
+  })
+
+  it('Check 3 SelectBox are rendered', () => {
+    const wrapper = mount(<App data={data}/>);
+    const selectList = wrapper.find('.SelectBox')
+    expect(selectList.length).toBe(3)
+    wrapper.unmount;
+  })
+
+  it('Check SelectFilter renders only once', () => {
+    const wrapper = mount(<App data={data}/>);
+    const selectList = wrapper.find('.SelectFilter')
+    expect(selectList.length).toBe(1)
+    wrapper.unmount;
+  })
+
+  it('Check SelectGroup renders only once', () => {
+    const wrapper = mount(<App data={data}/>);
+    const selectList = wrapper.find('.SelectGroup')
+    expect(selectList.length).toBe(1)
+    wrapper.unmount;
+  })
+
+  it('Check SelectedUnits renders only once', () => {
+    const wrapper = mount(<App data={data}/>);
+    const selectList = wrapper.find('.SelectedUnits')
+    expect(selectList.length).toBe(1)
+    wrapper.unmount;
+  })
+
+  it('Check SelectGroup list renders on SelectFilter item click', () => {
+    const wrapper = mount(<App data={data}/>);
+    const ActiveUnitsDiv = wrapper.find('#ActiveUnits')
+    expect(ActiveUnitsDiv.length).toBe(1)
+    const SelectGroupDiv = wrapper.find('.SelectGroup')
+    expect(SelectGroupDiv.length).toBe(1)
+    ActiveUnitsDiv.simulate('click')
+    const SelectGroupListChildren = wrapper.find('.SelectGroup').children()
+    expect(SelectGroupListChildren.length).toBe(data.SelectGroup.ActiveUnits.length)
+
+
+    for (var i =0 ;i < SelectGroupListChildren.length; i++) {
+   
+        expect(SelectGroupListChildren.at(i).text()).toBe(data.SelectGroup.ActiveUnits[i])
+
+    }
+
+    wrapper.unmount;
+  })
+
+
+  it('Check SelectGroup list renders on SelectGroup item click', () => {
+    const wrapper = mount(<App data={data}/>);
+    const ActiveUnitsDiv = wrapper.find('#ActiveUnits')
+    ActiveUnitsDiv.simulate('click')
+    const SelectGroupListChildren = wrapper.find('.SelectGroup').children()
+    expect(SelectGroupListChildren.length).toBe(data.SelectGroup.ActiveUnits.length)
+
+
+    for (var i =0 ;i < SelectGroupListChildren.length; i++) {
+   
+        expect(SelectGroupListChildren.at(i).text()).toBe(data.SelectGroup.ActiveUnits[i])
+
+    }
+
+    const SelectGroupDiv = wrapper.find('.SelectGroup')
+    expect(SelectGroupDiv.length).toBe(1)
+
+    const ActiveUnitsDivGroup = SelectGroupDiv.find('#ActiveUnits')
+    expect(ActiveUnitsDivGroup.length).toBe(1)
+    ActiveUnitsDivGroup.simulate('click')
+
+    const SelectedUnitsListChildren = wrapper.find('.SelectedUnits').children()
+    expect(SelectedUnitsListChildren.length).toBe(data.SelectedUnits.ActiveUnits.length)
+
+    for (var i =0 ;i < SelectedUnitsListChildren.length; i++) {
+   
+      expect(SelectedUnitsListChildren.at(i).text()).toBe(data.SelectedUnits.ActiveUnits[i])
+
+  }
+
+    wrapper.unmount;
+  })
+
+  it('Check SelectGroup list renders on SelectGroup item click', () => {
+    const wrapper = mount(<App data={data}/>);
+    const ActiveUnitsDiv = wrapper.find('#ActiveUnits')
+    ActiveUnitsDiv.simulate('click')
+    const SelectGroupListChildren = wrapper.find('.SelectGroup').children()
+    expect(SelectGroupListChildren.length).toBe(data.SelectGroup.ActiveUnits.length)
+
+
+    for (var i =0 ;i < SelectGroupListChildren.length; i++) {
+   
+        expect(SelectGroupListChildren.at(i).text()).toBe(data.SelectGroup.ActiveUnits[i])
+
+    }
+
+    const SelectGroupDiv = wrapper.find('.SelectGroup')
+    expect(SelectGroupDiv.length).toBe(1)
+
+    const ActiveUnitsDivGroup = SelectGroupDiv.find('#ActiveUnits')
+    expect(ActiveUnitsDivGroup.length).toBe(1)
+    ActiveUnitsDivGroup.simulate('click')
+
+    const SelectedUnitsListChildren = wrapper.find('.SelectedUnits').children()
+    expect(SelectedUnitsListChildren.length).toBe(data.SelectedUnits.ActiveUnits.length)
+
+    for (var i =0 ;i < SelectedUnitsListChildren.length; i++) {
+   
+      expect(SelectedUnitsListChildren.at(i).text()).toBe(data.SelectedUnits.ActiveUnits[i])
+
+  }
+  
+    wrapper.unmount;
+  })
+
+  it('Match snapshot on Active units selections', () => {
+    const wrapper = mount(<App data={data}/>);
+    wrapper.setState({SelectFilter:"ActiveUnits",SelectGroup:"ActiveUnits"})
+    expect(toJson(wrapper)).toMatchSnapshot()
+    wrapper.unmount;
+  })
+
 })

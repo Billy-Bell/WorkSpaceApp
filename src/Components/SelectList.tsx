@@ -55,6 +55,14 @@ const SelectList = (props: IProps) => {
         return true;
     }
 
+    function removeSpaces(title: string) {
+        let className = title;
+        while(className.indexOf(' ') > -1) {
+            className = className.replace(' ','');
+        }
+        return className;
+    }
+
     return (
         <div className={'col-5 pt-5 ' + (props.offset? 'offset-' + props.offset : '' )} >
             <tag-text
@@ -62,11 +70,11 @@ const SelectList = (props: IProps) => {
             text={SelectedText()}
             accent='title'>
             </tag-text>
-            <div className={'SelectBox mt-1 '}>
+            <div className={'SelectBox mt-1 ' + removeSpaces(props.Title)}>
             {props.ItemList.map(function(item,i) {
                return (
                 
-                <div key={i} id={name} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 '  + (ShowOption()? ' d-none ' : '') 
+                <div key={i} id={removeSpaces(item)} onClick={(e) => {HandleUpdate(section,item)}} className={'align-right SelectItem p-2 '  + (ShowOption()? ' d-none ' : '') 
                 + (selected(item) ? 'SelectedItem' : '')} style={{minHeight:'40px', maxHeight:'50px', padding: '0', cursor: 'pointer',  }} >
                     {item}
                     <span className={'float-right pr-2 '} >
